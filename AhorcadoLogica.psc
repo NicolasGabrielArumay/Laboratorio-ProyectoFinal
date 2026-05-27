@@ -115,9 +115,9 @@ FinSubProceso
 Algoritmo Menudelahorcameesta
 	definir a,e,r,f,fallas Como Entero
 	definir manzana Como Caracter
-	sprites("ahorcado",0,0)//esto solo muestra por pantalla, para llamar solo hay que poner "sprite("ahorcado" o "fases",i o 0,0)
 	Repetir
-		Escribir "Escriba su opcion: 1 Ahorcado 2: Reglas 3: salir"
+		sprites("ahorcado",0,0)//esto solo muestra por pantalla, para llamar solo hay que poner "sprite("ahorcado" o "fases",i o 0,0)
+		Escribir "Escriba su opcion: 1 Ahorcado 2: Planificacion 3: salir na mas"
 		leer a
 		Segun a Hacer
 			1:
@@ -139,9 +139,11 @@ Algoritmo Menudelahorcameesta
 			2:
 				Reglas(a)
 			3:
-				Escribir "ete sech"
+				
+			De Otro Modo:
+				Escribir "Pusiste una opcion incorrecta"
 		Fin Segun
-	Hasta Que a<=3 y a>=1//repite hasta que una de las opciones sea correcta
+	Hasta Que a=3 o a=1//repite hasta que una de las opciones sea correcta
 FinAlgoritmo
 SubProceso Adivinar(a)
 	Limpiar Pantalla
@@ -211,7 +213,7 @@ SubProceso Adivinar(a)
 		Escribir "#                           #"
 		Escribir "#       ¡ GANASTE !         #"
 		Escribir "#                           #"
-		Escribir "# Fallaste: ", i, "        #"
+		Escribir "#        Fallaste: ", i, "        #"
 		Escribir "#                           #"
 		Escribir "#############################"
 	SiNo
@@ -229,6 +231,70 @@ FinSubProceso
 
 SubProceso Reglas(a)
 	Limpiar Pantalla
-	Escribir "Ola jeff"	
+	Definir num Como Entero
+	Escribir "La idea del proyecto es simplemente, un ahorcado, y ya"	
+	Escribir ""
+	Escribir "Hago un menu para que podamos poner que hicimos y como va el proyecto"
+	Escribir "1: para ver la idea general"
+	Escribir "2: para ver que tenemos"
+	Escribir "3: para salir y ya"
+	Leer num
+	Segun num Hacer
+		1:
+			Escribir "Ideas generales:"
+			Escribir "Tabla de puntaje(si tenemos tiempo vemos si podemos hacer que se guarden en archivos)"
+			Escribir "Dificultades (como conceptos luego vemos como lo metemos, idea general: categoria y palabras mas complejas) junto a pistas con cada una"
+			Escribir "Sprites y un menu por ahora"
+			Escribir "Toque una tecla para continuar"
+			Esperar Tecla
+		2:
+			Escribir "Por ahora tenemos el menu, como se vera un poco visualmente el juego lo unico que hay que hacer para las dificultades es cambiar las palabras"
+			Escribir "Los sprites estan echos, maximo cambiamos los de victoria"
+			Escribir "Toque una tecla para continuar"			
+			Esperar Tecla
+		999:
+			Limpiar Pantalla
+			Escribir "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+			Escribir "@@@@@@@@@@@@@@@@@@@@@@@@%                              %@@@@@@@@@@@@@@@@@@@@@@@@"
+			Escribir "@@@@@@@@@@@@@@@@@*++++++=                              =++++++*@@@@@@@@@@@@@@@@@"
+			Escribir "@@@@@@@@@@@@@@@@@-                                            -@@@@@@@@@@@@@@@@@"
+			Escribir "@@@@@@@@@@@@=                                                      =@@@@@@@@@@@@"
+			Escribir "@@@@@@@@@@                                                            @@@@@@@@@@"
+			Escribir "@@@@@@@=                                                                =@@@@@@@"
+			Escribir "@@@@@++:                                                                :++@@@@@"
+			Escribir "@@@@@                                                                      @@@@@"
+			Escribir "@@@@@                                                                      @@@@@"
+			Escribir "@@+                                                                          +@@"
+			Escribir "@@+                                                                          +@@"
+			Escribir "@@+         -==============.                      -================-         +@@"
+			Escribir "@@+         *@@@@@@@@@@@@@@:                      #@@@@@@@@@@@@@@@@*         +@@"
+			Escribir "@@+    *@@@@@@@@@@@@@@@@@@@@@#.                .@@@@@@@@@@@@@@@@@@@@@@@@*    +@@"
+			Escribir "@@+  %%@@@@@@@@@@@@@@@@@@@@@@#.                .@@@@@@@@@@@@@@@@@@@@@@@@@%%  +@@"
+			Escribir "@@+  @@@@@@@@@@@@@@+++++@@@@@#.                .@@@@@%++++#@@@@@@@@@@@@@@@@  +@@"
+			Escribir "@@+  @@@@@@@@@@@@@@     @@@@@#.                .@@@@@*    =@@@@@@@@@@@@@@@@  +@@"
+			Escribir "@@+  @@@@@@@@@@@@@@     @@@@@#.                .@@@@@*    =@@@@@@@@@@@@@@@@  +@@"
+			Escribir "@@@@@  *@@@@@@@@@@@@@@@@@@@:      :#@@@@@@@       #@@@@@@@@@@@@@@@@@@@@@*  @@@@@"
+			Escribir "@@@@@  -====%@@@@@@@@@@@@@@:      :#@@@@@@@       #@@@@@@@@@@@@@@@@%====-  @@@@@"
+			Escribir "@@@@@       *@@@@@@@@@@@@@@:      :#@@@@@@@       #@@@@@@@@@@@@@@@@*       @@@@@"
+			Escribir "@@@@@@@=              %@%       *@@@@@@@@@@@@-      :@@:                =@@@@@@@"
+			Escribir "@@@@@@@=         #@@@@:         *@@@@@@@@@@@@-         %@@@@:           =@@@@@@@"
+			Escribir "@@@@@       *@@                 *@@@@@@@@@@@@-                -@@.         @@@@@"
+			Escribir "@@@@@       *@@**:              -============:                -@@**=       @@@@@"
+			Escribir "@@@@@       *@@@@-                                            -@@@@*       @@@@@"
+			Escribir "@@@@@  *@@@@@@@  #@@@@:                                  :@@@@@@@@@@@@.    @@@@@"
+			Escribir "@@@@@       *@@    :@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%  %@@@@.         @@@@@"
+			Escribir "@@@@@@@=      .@@@@@@@:      -@@=     :@@:     .@@-    %@%  %@#         =@@@@@@@"
+			Escribir "@@@@@@@=      .++%@@@@:      -@@=     :@@:     .@@-    %@@++++-         =@@@@@@@"
+			Escribir "@@@@@@@=         #@@@@:      -@@=     :@@:     .@@-    %@@@@:           =@@@@@@@"
+			Escribir "@@@@@@@@@@            %@@@@@@@@@=     :@@:     .@@- :@@@@%            @@@@@@@@@@"
+			Escribir "@@@@@@@@@@@@=              %@@@@@@@@@@@@@@@@@@@@@@@@%              =@@@@@@@@@@@@"
+			Escribir "@@@@@@@@@@@@@@@@@-                                            -@@@@@@@@@@@@@@@@@"
+			Escribir "@@@@@@@@@@@@@@@@@*++++++=                              =++++++*@@@@@@@@@@@@@@@@@"
+			Escribir "@@@@@@@@@@@@@@@@@@@@@@@@%                              %@@@@@@@@@@@@@@@@@@@@@@@@"
+			Escribir "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+			Escribir "Me quedo piola el sprite?"
+			Esperar Tecla
+			Limpiar Pantalla
+	Fin Segun
+	Limpiar Pantalla
 FinSubProceso
-	
